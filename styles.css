@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+section {
+    height: 95vh;
+}
+
+header { 
+    position: sticky;
+    top: 0;
+    
+    height: auto;
+    font-size: 1.5em;
+}
+
+
+.navbar-brand {
+    font-size: 3em !important;
+}
+
+.home {
+    background-color: orange;
+    height: 100%;
+}
+.projects {
+    background-color: yellowgreen;
+}
+
+.about {
+    background-color: yellow;
+    height: 100%;
+}
+
+.contact {
+    background-color: aquamarine;
+    height: 100%;
+}
