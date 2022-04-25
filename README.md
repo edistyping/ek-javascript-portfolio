@@ -1,6 +1,13 @@
 * Scrollable
 * Parallax
 
+To Do
+Try animating helicopter
+Finish Projects and Abouts
+
+Make a horizontal slide for each section
+Scrolling will make it go left or right
+
 1. Header
     - Include each Section below
     

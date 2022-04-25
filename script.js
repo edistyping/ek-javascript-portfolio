@@ -20,10 +20,25 @@ function loadQuotes(){
     }
     else    
         document.getElementById('favoriteQuote').innerHTML = "Loading Quotes...";
-    
+
     setTimeout(loadQuotes, 5000);
 }
 loadQuotes();
+
+function animateObjects(){
+    
+    //randomize for each items and move 
+    var helicopter = document.getElementById('helicopter').style;
+    var height = helicopter.height;
+
+    console.log("wow: " + height);
+    
+
+    setTimeout(animateObjects, 500);
+}
+animateObjects();
+
+
 
 
 window.onload = function () {
