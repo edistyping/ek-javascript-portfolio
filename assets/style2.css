@@ -2,11 +2,132 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    color: #888;
     line-height: 30px;
+    margin: 0;
+
+    width: 100vw;
+    max-width:100%;  /* added */
+}
+  
+section {
+    height: 100vh;
+    box-sizing: border-box;
+
+}
+
+.placeholder {
+    height: 10vh;
+}
+.bottom-image {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+}
+
+.section-home {
+    background-image: linear-gradient(#eb01a5, #d13531);
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.container-home {
+    height: 60%;
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    
+    border: solid 10px;
+    box-sizing: border-box;
+}
+.container-home h1 {
+    font-size: 10em;
+    font-weight: bold;
+    margin-left: 3%;
+    color: white;
+}
+.container-home h2 {
+    font-size: 4em;
+    margin-left: 3%;
+    color: white;
+}
+.container-home h3 {
+    font-size: 2em;
+    margin-left: 3%;
+    color: white;
+}
+
+
+
+.section-projects {
+    background-image: url(./static/img/gotham1.png), linear-gradient(orange, yellow);;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.container-projects {
+}
+
+/* 33333333 */
+.section-about {
+    background-image: linear-gradient(purple, blue);
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.container-about {
+    height: 60%;
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    
+    border: solid 10px;
+    box-sizing: border-box;
+}
+.container-about-header {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;    
+}
+.header-quote {
+    height: 50%;
+    display: flex;
+}
+.header-quoteowner {
+    height: 30%;
+    display: flex;
+    background-color: yellow;
+}
+.header-email {
+    height: 20%;
+    display: flex;
     text-align: center;
 }
- 
+.container-about-header h1 {
+    font-size: 3em;
+    margin: auto;
+    line-height: 1.3em;
+    color: white;
+}
+.container-about-header h2 {
+    text-align: right;
+    margin: auto 5%;
+    font-size: 3em;
+    color: rgb(92, 84, 84);
+}
+.container-about-header h3 {
+    font-size: 3em;
+    margin: auto;
+    color: white;
+}
+
+
+
+
+
 strong { font-weight: 600; }
  
 a, a:hover, a:focus {
@@ -15,15 +136,6 @@ a, a:hover, a:focus {
     transition: all .3s;
 }
  
-h1, h2 {
-    margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 38px;
-    font-weight: 300;
-    color: #555;
-    line-height: 50px;
-}
-  
 .navbar {
     background: #444;
     -o-transition: all .6s;
@@ -32,6 +144,8 @@ h1, h2 {
     -ms-transition: all .6s;
     transition: all .6s;
     backface-visibility: hidden;
+    
+    height: 10vh;
 }
  
 .navbar.navbar-no-bg {
@@ -67,8 +181,10 @@ h1, h2 {
  
 .navbar-brand {
     width: 136px;
-    background: url(../img/logo.png) left center no-repeat;
+    color: white;
+    background: url(./static/img/gothammark.png) left center no-repeat;
     border: 0;
-    text-indent: -99999px;
+
+
 }
 

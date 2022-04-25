@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 
     <link rel="stylesheet" href="assets/style2.css">
-        
+    <script type="text/javascript" src="/assets/favoriteQuotes.json"></script>
+
 </head>
 <body>
 
@@ -19,43 +20,75 @@
     <!-- Top menu -->
     <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
       <div class="container">
-          <a class="navbar-brand" href="index.html">Bootstrap 4 One Page Website Tutorial</a>
+          <a class="navbar-brand" href="index.html">Edward</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#top-content">Top</a>
+                      <a class="nav-link scroll-link" href="#home">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#services">Services</a>
+                      <a class="nav-link scroll-link" href="#projects">Projects</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#about-us">About</a>
+                      <a class="nav-link scroll-link" href="#about">About</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#portfolio">Work</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#testimonials">Clients</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#blog">Blog</a>
+                      <a class="nav-link scroll-link" href="#contact">Contact</a>
                   </li>
               </ul>
           </div>
       </div>
     </nav>
 
+    <section id="home" class="section-home">
+        <div class="placeholder"></div>
+    
+        <div class="container-home">
+            <h1>Hello World!</h1>
+            <h2>My name is Edistyping!</h2>
+            <h3>I enjoy Programming &#128187;, Music &#127911;, and Hot Teas &#9749;</h3>
+        </div>
+    
+    <img class="bottom-image" src="/assets/static/backgrounds/gotham1.png">
+    </section>
+
+    <section id="projects" class="section-projects">
+    <div class="placeholder"></div>
+        <div class="container-projects">
+            Projects
+        </div>
+
+    <img class="bottom-image" src="/assets/static/backgrounds/gotham1.png"> 
+    </section>
+
+    <section id="about" class="section-about">
+        <div class="placeholder"></div>
+
+        <div class="container-about">
+            <div class="container-about-header">
+                <div class="header-quote">
+                    <h1 id="favoriteQuote"></h1>
+                </div>
+                <div class="header-quoteowner">
+                    <h2 id="favoriteQuoteOwner" class="header1" ></h2>
+                </div>
+                <div class="header-email">
+                    <h3>Email: Edistyping</h3>
+                </div>
+            </div>
+        </div>
+
+    <img class="bottom-image" src="/assets/static/backgrounds/gotham1.png">
+    </section>
+
+
     <!-- Javascript -->
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <script src="./scripts.js"></script>
-
+    <script src="./script.js"></script>
 </body>
 </html>

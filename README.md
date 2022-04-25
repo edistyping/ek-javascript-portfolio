@@ -5,7 +5,8 @@
     - Include each Section below
     
 2. Home
-    - Name, Email, Skills
+    - Hello and Name, Email, Skills
+    - Make texts appear like Drone 
 
 3. Projects
     - Grid: 3 in only one row 
@@ -13,6 +14,7 @@
 
 4. About Me
     - Intro, Experience, Fun Pictures
+    - My favorite Quotes, musics, and movies 
 
 5. Contacts (Back to Header) 
 
