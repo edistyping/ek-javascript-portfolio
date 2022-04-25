@@ -29,7 +29,6 @@ loadQuotes();
 
 
 
-
 window.onload = function () {
     const json = '{"result":true, "count":42}';
     const obj = JSON.parse(json);
@@ -44,5 +43,24 @@ window.onload = function () {
         loadedQuotes = true;
         loadQuotes();
     });
+
+    getProjects();
+}
+
+// skills, project, description, imgs
+function getProjects() {
+    fetch("./assets/projects.json")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        for(var i = 0; i < data.length; i++) {
+            document.getElementById("project-title0").innerHTML = data[i].project;
+            document.getElementById("project-description0").innerHTML = data[i].description;
+            
+        }
+    }) 
+
+
+
 }
 //window.evevntListener
