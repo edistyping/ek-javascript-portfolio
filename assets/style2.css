@@ -206,11 +206,3 @@ a, a:hover, a:focus {
 
 }
 
-
-#helicopter {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 80vh;
-    left: 10vh;
-}

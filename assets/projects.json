@@ -1,0 +1,16 @@
+[
+    {
+        "project" : "Plan One",
+        "description" : "Hi there",
+        "skills" : ["Android Studio", "Agile"],
+        "imgs" : []
+    },
+    {
+        "project" : "Art is Price!", 
+        "description" : "Art is Price everybody",
+        "skills" : ["Django", "React", "Postgres", "Heroku" ],
+        "imgs" : []
+    }
+
+
+]
