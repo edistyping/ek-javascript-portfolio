@@ -161,42 +161,58 @@ section {
     height: 90%;
     width: 100%;
     display: flex;
-    justify-content: center;
-    
-    border: solid 10px;
-    box-sizing: border-box;
-}
-.container-about-header {
-    width: 80%;
-    height: 60%;
-    margin: auto;
-    
-    display: flex;
     flex-direction: column;
     
-    justify-content: space-evenly;
+    border: solid red  10px;
+    box-sizing: border-box;
 
 }
-.header-quote {
-    height: 60%;
+
+.container-about-header {
+    width: 100%;
+    height: 80%;
+    margin: auto;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+.container-about-bottom {
+    width: 100%;
+    height: 20%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    background-color: brown;
+}
+.header-quote {
+    height: 70%;
+    width: 100%;
     text-align: center;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
 }
 .header-quoteowner {
-    height: 40%;
-    display: flex;
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+
 }
-.container-about-header h1 {
-    font-size: 3em;
+.container-about-bottom h1 {
+    font-size: 2em;
     margin: auto;
     line-height: 1.3em;
     color: white;
 }
-.container-about-header h2 {
-    text-align: right;
-    margin: auto 5%;
-    font-size: 3em;
-    color: rgb(92, 84, 84);
+.container-about-bottom h2 {
+    font-size: 2em;
+    color: rgb(58, 50, 50);
 }
 
 

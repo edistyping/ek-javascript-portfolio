@@ -4,14 +4,30 @@ var loadedQuotes = false;
 var myFavoriteQuotes = [];
 
 
+// 
+var scrollValue = 0;
+var translateValue = 0;
+document.addEventListener('scroll', function(e) {
+    console.log("Scrolling...")
+    scrollValue++;
+
+    if (scrollValue > 10) {
+        translateValue += -1000;
+        console.log("wtf: " + scrollValue);
+        document.getElementById("container-home").style.transform = "translateX(" + translateValue + "px" + ")";
+        scrollValue = 0;
+    }
+});
+
+
 var i = 0; // word index
 var ii = 0; // arry index
 var index_emoji, index_emoji2 = -1;
 var speed = 100; /* The speed/duration of the effect in milliseconds */
 var homeTexts = ['Hello World!', 'My name is', 'Edward', 'I enjoy Programming &#128187;, Music &#127911;, and Hot Teas &#9749;']
 function typeWriter() {
-    //console.log("i: " + i + "   ii: " + ii + "   homeTexts[ii].length: " + homeTexts[ii].length);
-    //console.log("          homeTexts[ii].charAt(i): " + homeTexts[ii].charAt(i));
+    if (ii >= homeTexts.length)
+        return;
 
     if (ii == 0 && i < homeTexts[ii].length) {
         document.getElementById("helloworld").innerHTML += homeTexts[ii].charAt(i);
@@ -28,7 +44,7 @@ function typeWriter() {
     } else if ( ii == 3 && i < homeTexts[ii].length) {
         // Get & to ; location, 
         const currentChar = homeTexts[ii].charAt(i);
-        console.log("currentChar: " + currentChar);
+        // console.log("currentChar: " + currentChar);
         if (currentChar == '&') {
             index_emoji = homeTexts[ii].indexOf('&', i);
             index_emoji2 = homeTexts[ii].indexOf(';', i);
@@ -90,7 +106,6 @@ function loadProjects() {
         }
         document.getElementById("items-projects").innerHTML = content;
 }) 
-
 }
 
 

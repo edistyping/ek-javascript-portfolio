@@ -2,6 +2,10 @@
 * Parallax
 
 To Do
+- Decide which projects will go on here
+    - For old projects, just create a docx file for explanation
+
+- Might replace About page for Contact page 
 
 1. Make a horizontal slide for each section
     => Carousel again?
@@ -11,7 +15,6 @@ To Do
 
 3. Update Projects - Carousels for formatting 
 
-4. For old projects, just create a docx file for explanation
 
 
 // Grand Plan
@@ -46,6 +49,7 @@ img/project1.png
 Examples 
 - Portfolio example
     - https://amananku26.github.io/#home
+    - https://portfolio-neelbavarva.vercel.app/
 - Parallax Template
     - https://codepen.io/samdbeckham/pen/OPXPNp
     - Just bunch of png? How do I do the mountain background? 
