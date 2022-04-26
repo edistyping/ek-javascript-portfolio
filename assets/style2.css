@@ -77,7 +77,8 @@ section {
 
     border: solid 10px orange;
     position: absolute;
-    visibility: visible;
+    
+    visibility: hidden;
 
 }
 
@@ -170,7 +171,7 @@ section {
     position: absolute;
     
     border: solid 10px green;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .container-about-header {

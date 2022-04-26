@@ -6,16 +6,26 @@ var myFavoriteQuotes = [];
 
 // 
 var scrollValue = 0;
-var translateValue = 0;
-document.addEventListener('scroll', function(e) {
-    console.log("Scrolling...  " +  scrollValue);
+var slide = 0;
+document.addEventListener('wheel', function(e) {
+    console.log("wheeling...  ");
     scrollValue++;
+    if (scrollValue >= 8 && slide == 0) {        
+        console.log("wtf");
+        document.getElementById("container-home").style.opacity = 0;
+        document.getElementById("container-home").style.visibility = "hidden";
+        document.getElementById("container-home").style.transition = "visibility 0.6s, opacity 0.6s linear";
 
-    if (scrollValue >= 0) {
-        console.log("wtf: ");
+        document.getElementById("container-projects").style.opacity = 1;
+        document.getElementById("container-projects").style.visibility = "visible";
+        document.getElementById("container-projects").style.transition = "visibility 0s, opacity 0.6s linear";
 
-        console.log("wtf: " + scrollValue);
-        
+        document.getElementById("container-about").style.opacity = 0;
+        document.getElementById("container-about").style.visibility = "hidden";
+        document.getElementById("container-about").style.transition = "visibility 0s, opacity 0.6s linear";
+        scrollValue = 1;
+        slide = 1;
+    } else if (scrollValue >= 8 && slide == 1) {        
         document.getElementById("container-home").style.opacity = 0;
         document.getElementById("container-home").style.visibility = "hidden";
         document.getElementById("container-home").style.transition = "visibility 0s, opacity 0.6s linear";
@@ -27,9 +37,10 @@ document.addEventListener('scroll', function(e) {
         document.getElementById("container-about").style.opacity = 1;
         document.getElementById("container-about").style.visibility = "visible";
         document.getElementById("container-about").style.transition = "visibility 0s, opacity 0.6s linear";
-
         scrollValue = 0;
+        slide = 2;
     }
+        
 });
 
 
