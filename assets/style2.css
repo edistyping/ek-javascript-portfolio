@@ -12,7 +12,6 @@ body {
 section {
     height: 100vh;
     box-sizing: border-box;
-    border: blue solid 10px;
 }
 
 .placeholder {
@@ -39,7 +38,6 @@ section {
     flex-direction: column;
 
     justify-content: space-evenly;
-    
     box-sizing: border-box;
 }
 .container-home h1 {
@@ -52,21 +50,18 @@ section {
     font-size: 4em;
     margin-left: 3%;
     color: white;
+    display: inline;
 }
-.container-home h2 span{
-    font-size: 1em;
-    color: #FBFF35
-}
+
+
 .container-home h3 {
     font-size: 2em;
     margin-left: 3%;
     color: white;
 }
 
-
-
 .section-projects {
-    background-image: url(./static/img/gotham1.png), linear-gradient(orange, yellow);;
+    background-image: url(./static/img/gotham1.png), linear-gradient(yellow, purple);;
     background-position: left;
     background-repeat: no-repeat;
 }

@@ -2,17 +2,18 @@
 * Parallax
 
 To Do
-Try animating helicopter
-Finish Projects and Abouts
 
-Make a horizontal slide for each section
+1. Make a horizontal slide for each section
     => Carousel again?
 
-Scrolling will make it go left or right
+2. Scrolling will make it go left or right
     => Can this be done
 
-Update Projects - Carousels for formatting 
+3. Update Projects - Carousels for formatting 
 
+4. For Home, make texts appear like in Matrix 
+
+// Grand Plan
 1. Header
     - Include each Section below
     
