@@ -76,8 +76,8 @@ function loadProjects() {
             content += `<p id="project-description0" class="card-text">${data[i].description}</p>`
             content += `<p id="project-description0" class="card-text">${data[i].skills}</p>`
             content += '<div class="container" style="background: green; display: flex; justify-content: space-between ">';
-            content += `<a href="#" class="btn btn-primary">Github</a>`
-            content += `<a href="#" class="btn btn-primary">Demo</a>`
+            content += `<a href="${data[i].github}" class="btn btn-primary">Github</a>`
+            content += `<a href="${data[i].demo}" class="btn btn-primary">Demo</a>`
             content += '</div></div></div></div>';
  
             // close the row

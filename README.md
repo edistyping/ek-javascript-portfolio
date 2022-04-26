@@ -11,7 +11,8 @@ To Do
 
 3. Update Projects - Carousels for formatting 
 
-4. For Home, make texts appear like in Matrix 
+4. For old projects, just create a docx file for explanation
+
 
 // Grand Plan
 1. Header
@@ -60,3 +61,5 @@ Features
     
 2. Parallax Template
     - Background. 
+
+4. For Home, make texts appear like in Matrix 

@@ -3,37 +3,49 @@
         "project" : "Plan One",
         "description" : "Hi there",
         "skills" : ["Android Studio", "Agile"],
-        "url" : "./assets/static/projects/darksouls1.jpg"
+        "url" : "./assets/static/projects/darksouls1.jpg",
+        "github": "https://github.com/edistyping",
+        "demo" : ""
     },
     {
         "project" : "Art is Price!", 
         "description" : "Art is Price everybody",
         "skills" : ["Django", "React", "Postgres", "Heroku" ],
-        "url" : "./assets/static/projects/darksouls3.jpg"
+        "url" : "./assets/static/projects/darksouls3.jpg",
+        "github": "https://github.com/edistyping/priceisart",
+        "demo" : "https://edistyping.github.io/priceisart/"
     },
     {
         "project" : "Test 1", 
         "description" : "Test 1 Hi",
         "skills" : ["Django", "React", "Postgres", "Heroku" ],
-        "url" : "./assets/static/projects/gta5.jpg"
+        "url" : "./assets/static/projects/gta5.jpg",
+        "github": "https://github.com/edistyping",
+        "demo" : ""
     },
     {
         "project" : "Test 2!", 
         "description" : "Test 2!",
         "skills" : ["Django", "React", "Postgres", "Heroku" ],
-        "url" : "./assets/static/projects/worms wmd.jpg"
+        "url" : "./assets/static/projects/worms wmd.jpg",
+        "github": "https://github.com/edistyping/priceisart",
+        "demo" : ""
     },
     {
         "project" : "Test 3!", 
         "description" : "Art is Price everybody",
         "skills" : ["Django", "React", "Postgres", "Heroku" ],
-        "url" : "./assets/static/projects/tf2.jpg"
+        "url" : "./assets/static/projects/tf2.jpg",
+        "github": "https://github.com/edistyping",
+        "demo" : ""
     },
     {
         "project" : "Test 4!", 
         "description" : "Description Here",
         "skills" : ["Django", "React", "Postgres", "Heroku" ],
-        "url" : "./assets/static/projects/skyrim.jpg"
+        "url" : "./assets/static/projects/skyrim.jpg",
+        "github": "https://github.com/edistyping",
+        "demo" : ""
     }
 
 ]
