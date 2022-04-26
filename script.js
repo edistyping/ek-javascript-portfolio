@@ -8,13 +8,26 @@ var myFavoriteQuotes = [];
 var scrollValue = 0;
 var translateValue = 0;
 document.addEventListener('scroll', function(e) {
-    console.log("Scrolling...")
+    console.log("Scrolling...  " +  scrollValue);
     scrollValue++;
 
-    if (scrollValue > 10) {
-        translateValue += -1000;
+    if (scrollValue >= 0) {
+        console.log("wtf: ");
+
         console.log("wtf: " + scrollValue);
-        document.getElementById("container-home").style.transform = "translateX(" + translateValue + "px" + ")";
+        
+        document.getElementById("container-home").style.opacity = 0;
+        document.getElementById("container-home").style.visibility = "hidden";
+        document.getElementById("container-home").style.transition = "visibility 0s, opacity 0.6s linear";
+
+        document.getElementById("container-projects").style.opacity = 0;
+        document.getElementById("container-projects").style.visibility = "hidden";
+        document.getElementById("container-projects").style.transition = "visibility 0s, opacity 0.6s linear";
+
+        document.getElementById("container-about").style.opacity = 1;
+        document.getElementById("container-about").style.visibility = "visible";
+        document.getElementById("container-about").style.transition = "visibility 0s, opacity 0.6s linear";
+
         scrollValue = 0;
     }
 });

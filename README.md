@@ -10,10 +10,7 @@ To Do
 1. Make a horizontal slide for each section
     => Carousel again?
 
-2. Scrolling will make it go left or right
-    => Can this be done
-
-3. Update Projects - Carousels for formatting 
+2. Update Projects - Carousels for formatting 
 
 
 
@@ -67,3 +64,7 @@ Features
     - Background. 
 
 4. For Home, make texts appear like in Matrix 
+
+2. Scrolling will make it go left or right
+    => Can this be done
+    => Cancelled. This hurts the eye actually especially carouseling a large display
