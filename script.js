@@ -11,15 +11,19 @@ function loadProjects() {
     .then(data => {
         console.log(data);
         var itemCount = 0; // Use this to limit 3 row each row 
-        
+        var firstCarousel = true;
         var content = "";
         for(var i = 0; i < data.length; i++) {
-
+            console.log("i: " + firstCarousel);
             // add start row 
-            if(itemCount == 0){
+            if(itemCount == 0 && i == 0) {
+                content += `<div class="carousel-item active">`;
                 content += '<div class="row">';
-            } 
-
+            }  else if (itemCount == 0) {
+                content += `<div class="carousel-item">`;
+                content += '<div class="row">';
+            }
+            
             // add column
             content += '<div class="col-sm">';
             content += '<div class="card" style="width: 18rem;">';
@@ -33,14 +37,11 @@ function loadProjects() {
  
             // close the row
             if (itemCount == 2) {
-                content += '</div>'
+                content += '</div></div>' 
                 itemCount = 0;
             } else if (itemCount < 3) {
                 itemCount++;
             }
-            
-            
-
         }
         console.log(content);
         document.getElementById("items-projects").innerHTML = content;

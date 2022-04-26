@@ -72,38 +72,67 @@ section {
 }
 .container-projects {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 .projects-header {
     height: 10%;
+    width: 100%;
     display: flex;
+    background-color: #9b59b6;
 }
-.projects-header h2 {
+.projects-header-h2 {
     font-size: 2em;
-    margin: 1% 0 0 5%;
+    width: 20%;
+    margin: 0 0 0 0%;
+    line-height: 0;
+    text-align: center;
+    margin: auto;
 
 }
-.projects-header p {
+.projects-header-p {
     font-size: 2em;
-    margin: 1% 0 0 0%;
+    width: 80%;
+    margin: auto;
+    line-height: 0;
+    text-align: right;
+
 }
 .projects-body {
     height: 90%;
-    background-color: green;
 }
 
+.container-carousel {
+    display: flex;
+    justify-content: space-evenly;
+
+}
 .test {
-    height: 60%;
     width: 100%;
+    height: 100%;
     background-color: green;
 }
-
-.carousel-inner > img {
-    width:200px;
-    height:300px;
-  }
-
+.carousel {
+    height: 100%;
+    width: 100%;
+}
+.row {
+    height: 100%;
+    justify-content: center;
+}
+.col-sm {
+    height: 100%;
+}
+.card {
+    margin: auto;
+    text-align: center;
+}
+.card-img-top {
+    height: 250px;
+    width: 220px;
+    margin: 2% auto 0 auto;
+}
 
 /* 33333333 */
 .section-about {
@@ -112,9 +141,8 @@ section {
     background-repeat: no-repeat;
 }
 .container-about {
-    height: 60%;
+    height: 90%;
     width: 100%;
-    margin-top: 5%;
     display: flex;
     justify-content: center;
     
@@ -122,23 +150,24 @@ section {
     box-sizing: border-box;
 }
 .container-about-header {
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 100%;    
+    
+    justify-content: space-evenly;
+
 }
 .header-quote {
-    height: 50%;
-    display: flex;
-}
-.header-quoteowner {
     height: 60%;
     display: flex;
+    text-align: center;
 }
-.header-email {
+.header-quoteowner {
     height: 40%;
     display: flex;
-    text-align: center;
 }
 .container-about-header h1 {
     font-size: 3em;
@@ -151,11 +180,6 @@ section {
     margin: auto 5%;
     font-size: 3em;
     color: rgb(92, 84, 84);
-}
-.container-about-header h3 {
-    font-size: 3em;
-    margin: auto;
-    color: white;
 }
 
 
