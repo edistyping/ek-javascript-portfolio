@@ -3,14 +3,37 @@
         "project" : "Plan One",
         "description" : "Hi there",
         "skills" : ["Android Studio", "Agile"],
-        "imgs" : []
+        "url" : "./assets/static/projects/darksouls1.jpg"
     },
     {
         "project" : "Art is Price!", 
         "description" : "Art is Price everybody",
         "skills" : ["Django", "React", "Postgres", "Heroku" ],
-        "imgs" : []
+        "url" : "./assets/static/projects/darksouls3.jpg"
+    },
+    {
+        "project" : "Test 1", 
+        "description" : "Test 1 Hi",
+        "skills" : ["Django", "React", "Postgres", "Heroku" ],
+        "url" : "./assets/static/projects/gta5.jpg"
+    },
+    {
+        "project" : "Test 2!", 
+        "description" : "Test 2!",
+        "skills" : ["Django", "React", "Postgres", "Heroku" ],
+        "url" : "./assets/static/projects/worms wmd.jpg"
+    },
+    {
+        "project" : "Test 3!", 
+        "description" : "Art is Price everybody",
+        "skills" : ["Django", "React", "Postgres", "Heroku" ],
+        "url" : "./assets/static/projects/tf2.jpg"
+    },
+    {
+        "project" : "Test 4!", 
+        "description" : "Description Here",
+        "skills" : ["Django", "React", "Postgres", "Heroku" ],
+        "url" : "./assets/static/projects/skyrim.jpg"
     }
-
 
 ]

@@ -4,7 +4,50 @@ var loadedQuotes = false;
 var myFavoriteQuotes = [];
 
 
-// var myFavoriteQuotes = JSON.parse(data);
+// skills, project, description, imgs
+function loadProjects() {
+    fetch("./assets/projects.json")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        var itemCount = 0; // Use this to limit 3 row each row 
+        
+        var content = "";
+        for(var i = 0; i < data.length; i++) {
+
+            // add start row 
+            if(itemCount == 0){
+                content += '<div class="row">';
+            } 
+
+            // add column
+            content += '<div class="col-sm">';
+            content += '<div class="card" style="width: 18rem;">';
+            content += `<img class="card-img-top" src="${data[i].url}" alt="Card image cap">`;
+            content += '<div class="card-body">';
+            content += `<h5 id="project-title0" class="card-title">${data[i].project}</h5>`;
+            content += `<p id="project-description0" class="card-text">${data[i].description}</p>`
+            content += `<p id="project-description0" class="card-text">${data[i].skills}</p>`
+            content += `<a href="#" class="btn btn-primary">Go somewhere</a>`
+            content += '</div></div></div>';
+ 
+            // close the row
+            if (itemCount == 2) {
+                content += '</div>'
+                itemCount = 0;
+            } else if (itemCount < 3) {
+                itemCount++;
+            }
+            
+            
+
+        }
+        console.log(content);
+        document.getElementById("items-projects").innerHTML = content;
+}) 
+
+}
+
 
 function loadQuotes(){
     // do whatever you like here
@@ -25,10 +68,6 @@ function loadQuotes(){
 }
 loadQuotes();
 
-
-
-
-
 window.onload = function () {
     const json = '{"result":true, "count":42}';
     const obj = JSON.parse(json);
@@ -42,25 +81,10 @@ window.onload = function () {
         myFavoriteQuotes = data;
         loadedQuotes = true;
         loadQuotes();
+        loadProjects();
     });
 
-    getProjects();
 }
 
-// skills, project, description, imgs
-function getProjects() {
-    fetch("./assets/projects.json")
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        for(var i = 0; i < data.length; i++) {
-            document.getElementById("project-title0").innerHTML = data[i].project;
-            document.getElementById("project-description0").innerHTML = data[i].description;
-            
-        }
-    }) 
 
-
-
-}
 //window.evevntListener

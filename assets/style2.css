@@ -40,7 +40,6 @@ section {
 
     justify-content: space-evenly;
     
-    border: solid 10px;
     box-sizing: border-box;
 }
 .container-home h1 {
@@ -78,15 +77,32 @@ section {
 }
 .projects-header {
     height: 10%;
+    display: flex;
 }
 .projects-header h2 {
-    font-size: 3em;
+    font-size: 2em;
     margin: 1% 0 0 5%;
+
+}
+.projects-header p {
+    font-size: 2em;
+    margin: 1% 0 0 0%;
 }
 .projects-body {
     height: 90%;
     background-color: green;
 }
+
+.test {
+    height: 60%;
+    width: 100%;
+    background-color: green;
+}
+
+.carousel-inner > img {
+    width:200px;
+    height:300px;
+  }
 
 
 /* 33333333 */
