@@ -32,8 +32,10 @@ function loadProjects() {
             content += `<h5 id="project-title0" class="card-title">${data[i].project}</h5>`;
             content += `<p id="project-description0" class="card-text">${data[i].description}</p>`
             content += `<p id="project-description0" class="card-text">${data[i].skills}</p>`
-            content += `<a href="#" class="btn btn-primary">Go somewhere</a>`
-            content += '</div></div></div>';
+            content += '<div class="container" style="background: green; display: flex; justify-content: space-between ">';
+            content += `<a href="#" class="btn btn-primary">Github</a>`
+            content += `<a href="#" class="btn btn-primary">Demo</a>`
+            content += '</div></div></div></div>';
  
             // close the row
             if (itemCount == 2) {

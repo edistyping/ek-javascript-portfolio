@@ -6,12 +6,12 @@ Try animating helicopter
 Finish Projects and Abouts
 
 Make a horizontal slide for each section
-    => Carousel 
+    => Carousel again?
+
 Scrolling will make it go left or right
-    => ? 
+    => Can this be done
 
-Each carousel slide will contain up to 3 row
-
+Update Projects - Carousels for formatting 
 
 1. Header
     - Include each Section below

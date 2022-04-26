@@ -59,10 +59,22 @@
         <div class="container-projects">
             <div class="projects-header">
                 <h2 class="projects-header-h2">Projects</h2>
-                <p class="projects-header-p">Skills: (User can hover or click for filtering)</p>
+
+                <!--
+                    <p class="projects-header-p">Skills: React, Spfx, Django, VBA, SQL, Git</p>
+                -->
+                    
+                <div class="projects-header-icons">
+                    <img height="35px" src="/assets/static/logos/react.svg" alt="React" />
+                    <img height="35px" src="/assets/static/logos/django.png" alt="django" />
+                    <img height="35px" src="/assets/static/logos/node.png" alt="node" />
+                    <img height="35px" src="/assets/static/logos/sql.png" alt="sql" />
+                    <img height="35px" src="/assets/static/logos/vba.png" alt="vba" />
+                    <img height="35px" src="/assets/static/logos/github.png" alt="Github" />
+                </div>
             </div>
 
-            <div class="container test" id="container-projects">
+            <div class="container-outer-carousel" id="container-projects">
                 <!-- Carousel stuffs -->
                 <div id="carouselExampleIndicators" class="carousel slide container-carousel" data-ride="carousel">
                
@@ -72,8 +84,10 @@
                       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
                     
-                    <div id="items-projects"></div>
-
+                    <div class="carousel-inner">
+                        <div id="items-projects"></div>
+                    </div>
+                        
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
