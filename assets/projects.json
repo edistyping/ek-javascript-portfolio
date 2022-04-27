@@ -20,7 +20,7 @@
         "description" : "My team's presentation for Mobile App Challenge in 2016. Designed to incorporate Communication, Inventory, and Management for business",
         "skills" : ["Java", "SQL", "Android Studio"],
         "url" : "./assets/static/projects/inventstory.jpg",
-        "github": "https://github.com/edistyping/priceisart",
+        "github": "",
         "demo" : ""
     },
     {
@@ -28,7 +28,7 @@
         "description" : "My college friends designed this app that's intended to increase users' safety for outdoor activity by routinely track location and mimizing other consumption",
         "skills" : ["Agile", "Java", "SQL", "Android Studio"],
         "url" : "./assets/static/projects/notavailable.webp",
-        "github": "https://github.com/edistyping",
+        "github": "",
         "demo" : ""
     },
     {
@@ -36,7 +36,7 @@
         "description" : "I particiated in the engineering team 'Project Protect' at my unviersity whose goal is to increase awareness of antibacterial and improve communication between patients and doctors.",
         "skills" : ["Java", "Agile", "Android Studio" ],
         "url" : "./assets/static/projects/projectprotect.jpg",
-        "github": "https://github.com/edistyping",
+        "github": "",
         "demo" : ""
     },
     {
@@ -44,8 +44,17 @@
         "description" : "This is for you if you work at night and have multiple monitors. Add this site to your Bookmark and relax to focus!",
         "skills" : ["JavaScript", "HTML", "CSS" ],
         "url" : "./assets/static/projects/justblackscreen.jpg",
-        "github": "https://github.com/edistyping",
+        "github": "https://github.com/edistyping/javascript-justblackscreen/",
         "demo" : "https://edistyping.github.io/javascript-justblackscreen/"
+    },
+    {
+        "project" : "Are You Lakers Fan?", 
+        "description" : "This is a very difficult test to determine whether you're a true Lakers fan",
+        "skills" : ["JavaScript", "HTML", "CSS" ],
+        "url" : "./assets/static/projects/areyoutruelakersfan.jpg",
+        "github": "https://github.com/edistyping/javascript-areyouatruelakersfan/",
+        "demo" : "https://edistyping.github.io/javascript-areyouatruelakersfan//"
     }
+
 
 ]
