@@ -1,23 +1,11 @@
 * Scrollable
 * Parallax
 
-To Do
-- Clicking Navigation or Scroll up/down to switch pages 
-    - Scroll if scrollValue > 15
-    - If other way, flip scrollingDown and reset scrollValue
-    - If scrollValue and scrollingDown matches, flip slides
+# Future Plan 
++ Parallax Template
+    - Background. 
 
-- Decide which projects will go on here
-    - For old projects, just create a docx file for explanation
-
-- Might replace About page for Contact page 
-
-
-2. Update Projects - Carousels for formatting 
-
-
-
-// Grand Plan
+##  Grand Plan (Original; it does not affect changes already made)
 Theme Inspired: SNL and Gotham
 
 1. Header
@@ -38,15 +26,13 @@ Theme Inspired: SNL and Gotham
 5. Contacts (Back to Header) 
 
 
-
-# Access sqlite3 
+# Some Commands 
 sqlite3  db.sqlite3
 .tables
 w.headers on
 select * from projects_project;
 
-img/project1.png
-
+# Resources 
 
 Examples 
 - Portfolio example
@@ -61,15 +47,27 @@ Examples
     - https://github.com/ahmed-eidd/Ibrahim-Portfolio/blob/master/index.html
 
 
-Features
-1. Scrollable 
-    - Section and Link?
-    
-2. Parallax Template
-    - Background. 
+# Features Added/Removed
++. Scrollable 
+    - Section & Link?    
+    = 
 
-4. For Home, make texts appear like in Matrix 
++ For Home, make texts appear like in Matrix 
+    = Done; had to just render one character at a time using css/javascript
 
-2. Scrolling will make it go left or right
+- Scrolling will make it go left or right
     => Can this be done
     => Cancelled. This hurts the eye actually especially carouseling a large display
+    
++ Clicking Navigation or Scroll up/down to switch pages 
+    - Scroll if scrollValue > 15
+    - If other way, flip scrollingDown and reset scrollValue
+    - If scrollValue and scrollingDown matches, flip slides
+    = Done. 
+
++ Decide which projects will go on here
+    - For old projects, just create a docx file for explanation
+    = Done
+
++ Might replace About page for Contact page 
+    = Cancelled Contact Page and added to About 
