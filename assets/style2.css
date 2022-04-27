@@ -174,7 +174,7 @@ section {
 /* 33333333 */
 
 .container-about {
-    height: 80%;
+    height: 90%;
     width: 100%;
     position: absolute;
     
@@ -282,7 +282,12 @@ a, a:hover, a:focus {
     padding-left: 1rem;
     padding-right: 1rem;
 }
- 
+
+.navbar-nav > .active > a {
+    background-color: #3184d1;
+ }
+
+
 .navbar-brand {
     width: 136px;
     color: white;

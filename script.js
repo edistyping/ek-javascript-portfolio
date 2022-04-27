@@ -1,16 +1,41 @@
 console.log("Hi")
-var index = 0;
-var loadedQuotes = false;
-var myFavoriteQuotes = [];
+
+// For Nav and Paging
+// Link scrolling and nav tabs 
+var index_page = 0;
+var var_home = document.getElementById("nav-container-home"); 
+var var_projects = document.getElementById("nav-container-projects");
+var var_about = document.getElementById("nav-container-about");
+var arr_navs = [var_home, var_projects, var_about];
+
+var_home.addEventListener("click", function(e) {
+    var_home.classList.add('active'); 
+    var_projects.classList.remove('active');
+    var_about.classList.remove('active');
+
+});
+var_projects.addEventListener("click", function(e) {
+    var_home.classList.remove('active'); 
+    var_projects.classList.add('active');
+    var_about.classList.remove('active');
+
+    // update page
+});
+var_about.addEventListener("click", function(e) {
+    var_home.classList.remove('active'); 
+    var_projects.classList.remove('active');
+    var_about.classList.add('active');
+
+    // update page
+});
 
 
-// 
+// Scrolling
 var scrollValue = 0;
 var slide = 0;
 var scrollingDown = true;
 document.addEventListener('wheel', function(e) {
-    console.log("wheeling...  " + "scrollValue: " + scrollValue + "scrollingDown: " + scrollingDown + "   slide: " + slide);
-    console.log('delta: ' + e.deltaY)
+    // console.log("wheeling...  " + "scrollValue: " + scrollValue + "scrollingDown: " + scrollingDown + "   slide: " + slide);\
 
     var home = document.getElementById("container-home"); 
     var projects = document.getElementById("container-projects");
@@ -30,8 +55,8 @@ document.addEventListener('wheel', function(e) {
         scrollValue++;
     }
 
-    // Processing switching
-    if (scrollValue >= 10 && scrollingDown && slide < 2) {
+    // Update pages or process switching
+    if (scrollValue >= 20 && scrollingDown && slide < 2) {
         scrollValue = 0;
         slide++;
         arr_pages[slide - 1].style.opacity = 0;
@@ -41,10 +66,14 @@ document.addEventListener('wheel', function(e) {
         arr_pages[slide].style.opacity = 1;
         arr_pages[slide].style.visibility = "visible";
         arr_pages[slide].style.transition = "visibility 0.6s, opacity 0.6s linear";
+
+        arr_navs[slide - 1].classList.remove('active');
+        arr_navs[slide].classList.add('active');
+        
         if (slide >= 3) {
             slide = 2;
         }
-    } else if (scrollValue >= 10 && !scrollingDown && slide > 0) { 
+    } else if (scrollValue >= 20 && !scrollingDown && slide > 0) { 
         scrollValue = 0;
         slide--;
         arr_pages[slide + 1].style.opacity = 0;
@@ -54,6 +83,10 @@ document.addEventListener('wheel', function(e) {
         arr_pages[slide].style.opacity = 1;
         arr_pages[slide].style.visibility = "visible";
         arr_pages[slide].style.transition = "visibility 0.6s, opacity 0.6s linear";
+
+        arr_navs[slide + 1].classList.remove('active');
+        arr_navs[slide].classList.add('active');
+
         if (slide <= 0) {
             slide = 0;
         }
@@ -62,7 +95,7 @@ document.addEventListener('wheel', function(e) {
 
 });
 
-
+// Home page typing
 var i = 0; // word index
 var ii = 0; // arry index
 var index_emoji, index_emoji2 = -1;
@@ -151,7 +184,10 @@ function loadProjects() {
 }) 
 }
 
-
+// For quotes
+var index = 0;
+var loadedQuotes = false;
+var myFavoriteQuotes = [];
 function loadQuotes(){
     // do whatever you like here
     if (index == myFavoriteQuotes.length - 1)

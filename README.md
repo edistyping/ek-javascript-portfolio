@@ -2,7 +2,7 @@
 * Parallax
 
 To Do
-- Scroll up or down to switch pages 
+- Clicking Navigation or Scroll up/down to switch pages 
     - Scroll if scrollValue > 15
     - If other way, flip scrollingDown and reset scrollValue
     - If scrollValue and scrollingDown matches, flip slides
