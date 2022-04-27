@@ -12,14 +12,14 @@ To Do
 
 - Might replace About page for Contact page 
 
-1. Make a horizontal slide for each section
-    => Carousel again?
 
 2. Update Projects - Carousels for formatting 
 
 
 
 // Grand Plan
+Theme Inspired: SNL and Gotham
+
 1. Header
     - Include each Section below
     

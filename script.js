@@ -8,27 +8,74 @@ var var_projects = document.getElementById("nav-container-projects");
 var var_about = document.getElementById("nav-container-about");
 var arr_navs = [var_home, var_projects, var_about];
 
+var home = document.getElementById("container-home"); 
+var projects = document.getElementById("container-projects");
+var about = document.getElementById("container-about");
+
+// arr_pages[slide - 1].style.opacity = 0;
+// arr_pages[slide - 1].style.visibility = "hidden";
+// arr_pages[slide - 1].style.transition = "visibility 0.6s, opacity 0.6s linear";
+
+// arr_pages[slide].style.opacity = 1;
+// arr_pages[slide].style.visibility = "visible";
+// arr_pages[slide].style.transition = "visibility 0.6s, opacity 0.6s linear";
+
 var_home.addEventListener("click", function(e) {
     var_home.classList.add('active'); 
     var_projects.classList.remove('active');
     var_about.classList.remove('active');
 
+    console.log('hereee')
+    // update page
+    // var home = document.getElementById("container-home"); 
+    // var projects = document.getElementById("container-projects");
+    // var about = document.getElementById("container-about");
+
+    home.style.opacity = 1;
+    home.style.visibility = "visible";
+    home.style.transition = "visibility 0.1s, opacity 0.6s linear";
+
+    projects.style.opacity = 0;
+    projects.style.visibility = "hidden";
+    projects.style.transition = "visibility 0.1s, opacity 0.6s linear";
+    about.style.opacity = 0;
+    about.style.visibility = "hidden";
+    about.style.transition = "visibility 0.1s, opacity 0.6s linear";
+    slide = 0;
 });
 var_projects.addEventListener("click", function(e) {
     var_home.classList.remove('active'); 
     var_projects.classList.add('active');
     var_about.classList.remove('active');
 
-    // update page
+    home.style.opacity = 0;
+    home.style.visibility = "hidden";
+    home.style.transition = "visibility 0.1s, opacity 0.6s linear";
+    projects.style.opacity = 1;
+    projects.style.visibility = "visible";
+    projects.style.transition = "visibility 0.1s, opacity 0.6s linear";    
+    about.style.opacity = 0;
+    about.style.visibility = "hidden";
+    about.style.transition = "visibility 0.1s, opacity 0.6s linear";
+    slide = 1;
 });
 var_about.addEventListener("click", function(e) {
     var_home.classList.remove('active'); 
     var_projects.classList.remove('active');
     var_about.classList.add('active');
 
-    // update page
-});
+    home.style.opacity = 0;
+    home.style.visibility = "hidden";
+    home.style.transition = "visibility 0.1s, opacity 0.6s linear";
+    projects.style.opacity = 0;
+    projects.style.visibility = "hidden";
+    projects.style.transition = "visibility 0.1s, opacity 0.6s linear";
 
+    about.style.opacity = 1;
+    about.style.visibility = "visible";
+    about.style.transition = "visibility 0.1s, opacity 0.6s linear";
+    slide = 2;
+});
 
 // Scrolling
 var scrollValue = 0;
@@ -37,9 +84,6 @@ var scrollingDown = true;
 document.addEventListener('wheel', function(e) {
     // console.log("wheeling...  " + "scrollValue: " + scrollValue + "scrollingDown: " + scrollingDown + "   slide: " + slide);\
 
-    var home = document.getElementById("container-home"); 
-    var projects = document.getElementById("container-projects");
-    var about = document.getElementById("container-about");
     var arr_pages = [home, projects, about];
 
     // if (e.deltaY > 0) // scrolling down
@@ -56,16 +100,16 @@ document.addEventListener('wheel', function(e) {
     }
 
     // Update pages or process switching
-    if (scrollValue >= 20 && scrollingDown && slide < 2) {
+    if (scrollValue >= 8 && scrollingDown && slide < 2) {
         scrollValue = 0;
         slide++;
         arr_pages[slide - 1].style.opacity = 0;
         arr_pages[slide - 1].style.visibility = "hidden";
-        arr_pages[slide - 1].style.transition = "visibility 0.6s, opacity 0.6s linear";
+        arr_pages[slide - 1].style.transition = "visibility 0.1s, opacity 0.6s linear";
 
         arr_pages[slide].style.opacity = 1;
         arr_pages[slide].style.visibility = "visible";
-        arr_pages[slide].style.transition = "visibility 0.6s, opacity 0.6s linear";
+        arr_pages[slide].style.transition = "visibility 0.1s, opacity 0.6s linear";
 
         arr_navs[slide - 1].classList.remove('active');
         arr_navs[slide].classList.add('active');
@@ -73,16 +117,16 @@ document.addEventListener('wheel', function(e) {
         if (slide >= 3) {
             slide = 2;
         }
-    } else if (scrollValue >= 20 && !scrollingDown && slide > 0) { 
+    } else if (scrollValue >= 8 && !scrollingDown && slide > 0) { 
         scrollValue = 0;
         slide--;
         arr_pages[slide + 1].style.opacity = 0;
         arr_pages[slide + 1].style.visibility = "hidden";
-        arr_pages[slide + 1].style.transition = "visibility 0.6s, opacity 0.6s linear";
+        arr_pages[slide + 1].style.transition = "visibility 0.1s, opacity 0.6s linear";
 
         arr_pages[slide].style.opacity = 1;
         arr_pages[slide].style.visibility = "visible";
-        arr_pages[slide].style.transition = "visibility 0.6s, opacity 0.6s linear";
+        arr_pages[slide].style.transition = "visibility 0.1s, opacity 0.6s linear";
 
         arr_navs[slide + 1].classList.remove('active');
         arr_navs[slide].classList.add('active');
@@ -91,7 +135,6 @@ document.addEventListener('wheel', function(e) {
             slide = 0;
         }
     }
-
 
 });
 
@@ -141,6 +184,19 @@ function typeWriter() {
     }
 }
 
+function formatSkills(arr) {
+    var temp = ""
+    console.log(arr);
+    for(var i = 0; i < arr.length; i++) {
+        if (i == arr.length - 1) {
+            temp += arr[i];
+        } else {
+            temp += arr[i] + " | "
+        }
+    }
+    return temp; 
+}
+
 // skills, project, description, imgs
 function loadProjects() {
     fetch("./assets/projects.json")
@@ -166,8 +222,8 @@ function loadProjects() {
             content += '<div class="card-body">';
             content += `<h5 id="project-title0" class="card-title">${data[i].project}</h5>`;
             content += `<p id="project-description0" class="card-text">${data[i].description}</p>`
-            content += `<p id="project-description0" class="card-text">${data[i].skills}</p>`
-            content += '<div class="container" style="background: green; display: flex; justify-content: space-between ">';
+            content += `<p id="project-description1" class="card-text">${formatSkills(data[i].skills)}</p>`
+            content += '<div class="container" style="display: flex; justify-content: space-between ">';
             content += `<a href="${data[i].github}" class="btn btn-primary">Github</a>`
             content += `<a href="${data[i].demo}" class="btn btn-primary">Demo</a>`
             content += '</div></div></div></div>';

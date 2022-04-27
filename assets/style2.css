@@ -1,7 +1,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
+
     margin: 0;
 
     width: 100vw;
@@ -16,7 +15,8 @@ section {
     background-image: linear-gradient(#302b2e, #3184d1);
     background-position: left;
     background-repeat: no-repeat;
-    
+
+    overflow: hidden;
 }
 
 .placeholder {
@@ -43,7 +43,7 @@ section {
     position: absolute;
     
     margin-top: 0%;
-    border: solid pink 10px;;
+
     
 }
 .container-home h1 {
@@ -68,7 +68,7 @@ section {
     height: 60%; 
     display: flex; 
     flex-direction: column; 
-    margin: auto 0;
+    margin: 5% 0;
     justify-content: center;
 }
 
@@ -83,7 +83,6 @@ section {
     
     flex-direction: column;
 
-    border: solid 10px orange;
     position: absolute;
 
     visibility: hidden;
@@ -94,17 +93,16 @@ section {
     height: 10%;
     width: 100%;
     display: flex;
-    background-color: grey;
 }
 .projects-header-h2 {
-    font-size: 3em;
-    width: 20%;
-    margin: 0 0 0 0%;
-    line-height: 0;
+    font-size: 4em;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    margin: auto;
     color: white;
 
+    margin: 1% 0 0 0; 
 }
 .projects-header-p {
     font-size: 2em;
@@ -139,10 +137,16 @@ section {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    height: 100%;
 }
 .carousel {
     height: 100%;
     width: 100%;
+
+}
+.carousel-item {
+    height: 100%;
+    margin: auto;
 }
 .row {
     height: 100%;
@@ -152,18 +156,29 @@ section {
     height: 100%;
 }
 .card {
-    margin: auto;
+    margin: 15% auto;
+    border-radius: 5px;
     text-align: center;
+    height: fit-content;
 }
 .card-img-top {
     height: 250px;
     width: 220px;
     margin: 2% auto 0 auto;
+    border-radius: 10px;
+}
+.card-body {
+    height: 100%;
+}
+.card-title {
+    font-size: 1.5em;
+}
+#project-description1 {
+    font-size: 0.8em;
 }
 .carousel-inner {
-    width: 75%;
-    height: auto;
-    border: solid orangered 10px;
+    width: 80%;
+    height: 100%;
 }
 .carousel-control-prev, .carousel-control-next {
     filter: invert(100%);
@@ -178,27 +193,48 @@ section {
     width: 100%;
     position: absolute;
     
-    border: solid 10px green;
+    border: solid 10px;
     visibility: hidden;
 }
 
 .container-about-header {
     width: 100%;
-    height: 80%;
+    height: 60%;
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     color: white;
+
 }
-.container-about-bottom {
-    width: 100%;
-    height: 20%;
-    margin: auto;
+.container-about-header-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    height: 80%;
+    justify-content: center;
+    padding: 0 0 0 5%;
+}
+.container-about-header-content h1 {
+    font-size: 7em;
+}
+.container-about-header-content h2 {
+    font-size: 2em;
+    margin-top: 3%;
+}
+#text-special {
+    color: #e3ff00;
+}
 
+.container-about-bottom {
+    width: 90%;
+    height: 40%;
+    margin: auto;
+
+    justify-content: space-evenly;
+    font-weight: bold;
+
+
+    text-align: center;
 }
 .header-quote {
     height: 70%;
@@ -219,13 +255,22 @@ section {
 }
 .container-about-bottom h1 {
     font-size: 2em;
-    margin: auto;
     line-height: 1.3em;
     color: white;
+    font-weight: bold;
+    margin-bottom: 2%;
+    width: 100%;
+
+    text-align: justify;
+
+
 }
 .container-about-bottom h2 {
     font-size: 2em;
-    color: rgb(58, 50, 50);
+    color: rgb(49, 47, 47);
+    font-weight: bold;
+    text-align: left;
+
 }
 
 
