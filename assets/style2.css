@@ -162,8 +162,8 @@ section {
     height: fit-content;
 }
 .card-img-top {
-    height: 250px;
-    width: 220px;
+    height: 200px;
+    width: 200px;
     margin: 2% auto 0 auto;
     border-radius: 10px;
 }
@@ -172,6 +172,9 @@ section {
 }
 .card-title {
     font-size: 1.5em;
+}
+#project-description0 {
+    text-align: center;
 }
 #project-description1 {
     font-size: 0.8em;
