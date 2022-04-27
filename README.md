@@ -1,6 +1,8 @@
 * Scrollable
 * Parallax
 
+### Link: https://edistyping.github.io/javascript-portfolio/
+
 # Future Plan 
 + Parallax Template
     - Background. 
