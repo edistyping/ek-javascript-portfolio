@@ -228,6 +228,17 @@ function loadProjects() {
             content += `<a href="${data[i].demo}" class="btn btn-primary">Demo</a>`
             content += '</div></div></div></div>';
  
+            // Add additional columns if last row has only 1 or 2 items.
+            if (i == data.length - 1 && itemCount == 0) {
+                console.log("111111");
+                content += '<div class="col-sm">';
+                content += '</div>'
+            } else if (i == data.length - 1 && itemCount == 1) {
+                console.log("222222");
+                content += '<div class="col-sm">';
+                content += '</div>'
+            }
+
             // close the row
             if (itemCount == 2) {
                 content += '</div></div>' 
