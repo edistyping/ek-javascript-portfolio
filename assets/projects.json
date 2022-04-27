@@ -34,7 +34,7 @@
     {
         "project" : "Project Protect", 
         "description" : "I particiated in the engineering team 'Project Protect' at my unviersity whose goal is to increase awareness of antibacterial and improve communication between patients and doctors.",
-        "skills" : ["Java", "Agile"  ],
+        "skills" : ["Java", "Agile", "Android Studio" ],
         "url" : "./assets/static/projects/projectprotect.jpg",
         "github": "https://github.com/edistyping",
         "demo" : ""
