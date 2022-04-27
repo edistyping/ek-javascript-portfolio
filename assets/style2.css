@@ -49,19 +49,27 @@ section {
 .container-home h1 {
     font-size: 10em;
     font-weight: bold;
-    margin-left: 3%;
+    margin: 0 0 0 3%;
     color: white;
 }
 .container-home h2 {
     font-size: 4em;
-    margin-left: 3%;
+    margin: 0 0 0 3%;
     color: white;
     display: inline;
+    width: fit-content;
 }
 .container-home h3 {
     font-size: 2em;
-    margin-left: 3%;
+    margin: 2% 0 0 3%;
     color: white;
+}
+.container-home-header {
+    height: 60%; 
+    display: flex; 
+    flex-direction: column; 
+    margin: auto 0;
+    justify-content: center;
 }
 
 .section-projects {

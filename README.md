@@ -2,6 +2,11 @@
 * Parallax
 
 To Do
+- Scroll up or down to switch pages 
+    - Scroll if scrollValue > 15
+    - If other way, flip scrollingDown and reset scrollValue
+    - If scrollValue and scrollingDown matches, flip slides
+
 - Decide which projects will go on here
     - For old projects, just create a docx file for explanation
 

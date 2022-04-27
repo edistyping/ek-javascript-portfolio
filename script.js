@@ -7,40 +7,59 @@ var myFavoriteQuotes = [];
 // 
 var scrollValue = 0;
 var slide = 0;
+var scrollingDown = true;
 document.addEventListener('wheel', function(e) {
-    console.log("wheeling...  ");
-    scrollValue++;
-    if (scrollValue >= 8 && slide == 0) {        
-        console.log("wtf");
-        document.getElementById("container-home").style.opacity = 0;
-        document.getElementById("container-home").style.visibility = "hidden";
-        document.getElementById("container-home").style.transition = "visibility 0.6s, opacity 0.6s linear";
+    console.log("wheeling...  " + "scrollValue: " + scrollValue + "scrollingDown: " + scrollingDown + "   slide: " + slide);
+    console.log('delta: ' + e.deltaY)
 
-        document.getElementById("container-projects").style.opacity = 1;
-        document.getElementById("container-projects").style.visibility = "visible";
-        document.getElementById("container-projects").style.transition = "visibility 0s, opacity 0.6s linear";
+    var home = document.getElementById("container-home"); 
+    var projects = document.getElementById("container-projects");
+    var about = document.getElementById("container-about");
+    var arr_pages = [home, projects, about];
 
-        document.getElementById("container-about").style.opacity = 0;
-        document.getElementById("container-about").style.visibility = "hidden";
-        document.getElementById("container-about").style.transition = "visibility 0s, opacity 0.6s linear";
-        scrollValue = 1;
-        slide = 1;
-    } else if (scrollValue >= 8 && slide == 1) {        
-        document.getElementById("container-home").style.opacity = 0;
-        document.getElementById("container-home").style.visibility = "hidden";
-        document.getElementById("container-home").style.transition = "visibility 0s, opacity 0.6s linear";
-
-        document.getElementById("container-projects").style.opacity = 0;
-        document.getElementById("container-projects").style.visibility = "hidden";
-        document.getElementById("container-projects").style.transition = "visibility 0s, opacity 0.6s linear";
-
-        document.getElementById("container-about").style.opacity = 1;
-        document.getElementById("container-about").style.visibility = "visible";
-        document.getElementById("container-about").style.transition = "visibility 0s, opacity 0.6s linear";
+    // if (e.deltaY > 0) // scrolling down
+    if (e.deltaY > 0 && scrollingDown) { // scroll down
+        scrollValue++;
+    } else if (e.deltaY > 0 && !scrollingDown) {
         scrollValue = 0;
-        slide = 2;
+        scrollingDown = true;
+    } else if (e.deltaY < 0 && scrollingDown) { // scroll up
+        scrollValue = 0;
+        scrollingDown = false;
+    } else if (e.deltaY < 0 && !scrollingDown) {
+        scrollValue++;
     }
-        
+
+    // Processing switching
+    if (scrollValue >= 10 && scrollingDown && slide < 2) {
+        scrollValue = 0;
+        slide++;
+        arr_pages[slide - 1].style.opacity = 0;
+        arr_pages[slide - 1].style.visibility = "hidden";
+        arr_pages[slide - 1].style.transition = "visibility 0.6s, opacity 0.6s linear";
+
+        arr_pages[slide].style.opacity = 1;
+        arr_pages[slide].style.visibility = "visible";
+        arr_pages[slide].style.transition = "visibility 0.6s, opacity 0.6s linear";
+        if (slide >= 3) {
+            slide = 2;
+        }
+    } else if (scrollValue >= 10 && !scrollingDown && slide > 0) { 
+        scrollValue = 0;
+        slide--;
+        arr_pages[slide + 1].style.opacity = 0;
+        arr_pages[slide + 1].style.visibility = "hidden";
+        arr_pages[slide + 1].style.transition = "visibility 0.6s, opacity 0.6s linear";
+
+        arr_pages[slide].style.opacity = 1;
+        arr_pages[slide].style.visibility = "visible";
+        arr_pages[slide].style.transition = "visibility 0.6s, opacity 0.6s linear";
+        if (slide <= 0) {
+            slide = 0;
+        }
+    }
+
+
 });
 
 
@@ -52,7 +71,7 @@ var homeTexts = ['Hello World!', 'My name is', 'Edward', 'I enjoy Programming &#
 function typeWriter() {
     if (ii >= homeTexts.length)
         return;
-
+    
     if (ii == 0 && i < homeTexts[ii].length) {
         document.getElementById("helloworld").innerHTML += homeTexts[ii].charAt(i);
         i++;
@@ -79,13 +98,13 @@ function typeWriter() {
             document.getElementById("ienjoy").innerHTML += homeTexts[ii].charAt(i);
             i++;
         }
-        setTimeout(typeWriter, 200);
+        setTimeout(typeWriter, speed);
     } 
 
     if (i >= homeTexts[ii].length) {
         ii++;
         i = 0;
-        setTimeout(typeWriter, 200);
+        setTimeout(typeWriter, speed);
     }
 }
 
