@@ -4,6 +4,7 @@
 # Future Plan 
 + Parallax Template
     - Background. 
++ Custom Domain
 
 ##  Grand Plan (Original; it does not affect changes already made)
 Theme Inspired: SNL and Gotham
