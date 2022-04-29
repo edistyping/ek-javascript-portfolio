@@ -41,6 +41,8 @@ Examples
 - Portfolio example
     - https://amananku26.github.io/#home
     - https://portfolio-neelbavarva.vercel.app/
+    - https://vlad-moroshan.herokuapp.com/
+
 - Parallax Template
     - https://codepen.io/samdbeckham/pen/OPXPNp
     - Just bunch of png? How do I do the mountain background? 

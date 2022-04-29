@@ -12,25 +12,12 @@ var home = document.getElementById("container-home");
 var projects = document.getElementById("container-projects");
 var about = document.getElementById("container-about");
 
-// arr_pages[slide - 1].style.opacity = 0;
-// arr_pages[slide - 1].style.visibility = "hidden";
-// arr_pages[slide - 1].style.transition = "visibility 0.6s, opacity 0.6s linear";
-
-// arr_pages[slide].style.opacity = 1;
-// arr_pages[slide].style.visibility = "visible";
-// arr_pages[slide].style.transition = "visibility 0.6s, opacity 0.6s linear";
-
 var_home.addEventListener("click", function(e) {
     var_home.classList.add('active'); 
     var_projects.classList.remove('active');
     var_about.classList.remove('active');
 
-    console.log('hereee')
     // update page
-    // var home = document.getElementById("container-home"); 
-    // var projects = document.getElementById("container-projects");
-    // var about = document.getElementById("container-about");
-
     home.style.opacity = 1;
     home.style.visibility = "visible";
     home.style.transition = "visibility 0.1s, opacity 0.6s linear";
@@ -82,11 +69,9 @@ var scrollValue = 0;
 var slide = 0;
 var scrollingDown = true;
 document.addEventListener('wheel', function(e) {
-    // console.log("wheeling...  " + "scrollValue: " + scrollValue + "scrollingDown: " + scrollingDown + "   slide: " + slide);\
 
     var arr_pages = [home, projects, about];
 
-    // if (e.deltaY > 0) // scrolling down
     if (e.deltaY > 0 && scrollingDown) { // scroll down
         scrollValue++;
     } else if (e.deltaY > 0 && !scrollingDown) {

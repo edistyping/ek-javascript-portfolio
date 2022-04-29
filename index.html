@@ -12,12 +12,10 @@
 
     <link rel="stylesheet" href="assets/style2.css">
     <script type="text/javascript" src="/assets/favoriteQuotes.json"></script>
-
 </head>
 <body>
 
-
-    <!-- Top menu -->
+    <!-- Top Navigation Menu -->
     <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
       <div class="container">
           <a class="navbar-brand" href="index.html">edistyping@gmail.com</a>
@@ -40,12 +38,17 @@
       </div>
     </nav>
 
+
+    <!--  Body -->
     <section>
     <div class="placeholder"></div>
     <img class="bottom-image" src="./assets/static/backgrounds/gotham1.png">
     <p style="position: fixed; color: white; bottom: 0; right: 1%">This site is created using Vanilla JS and little Bootstrap</p>
+    
         <div id="container-content" class="container-content">
 
+
+            <!--  Home -->
             <div id="container-home" class="container-home">
                 <div class="container-home-header">
                     <h1 id="helloworld"></h1>
@@ -56,33 +59,19 @@
                 </div>
             </div>
 
-
+            <!--  Projects -->
             <div id="container-projects" class="container-projects">
                 <div class="projects-header">
-                    <h2 class="projects-header-h2">Projects</h2>
-                    <!--
-                        <div class="projects-header-icons">
-                            
-                            <div class="bg-image hover-zoom">
-                                <img class="w-100" height="35px" src="/assets/static/logos/react.svg" alt="React" />                        
-                            </div>
-                            <img height="35px" src="/assets/static/logos/django.png" alt="django" />
-                            <img height="35px" src="/assets/static/logos/node.png" alt="node" />
-                            <img height="35px" src="/assets/static/logos/sql.png" alt="sql" />
-                            <img height="35px" src="/assets/static/logos/vba.png" alt="vba" />
-                            <img height="35px" src="/assets/static/logos/github.png" alt="Github" />
-                        </div>
-                    -->                    
+                    <h2 class="projects-header-h2">Projects</h2>                
                 </div>
 
+                <!-- Carousel for Projects -->
                 <div class="container-outer-carousel" id="container-projects">
-                    <!-- Carousel stuffs -->
                     <div id="carouselExampleIndicators" class="carousel slide container-carousel" data-ride="carousel">
-                
                         <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                         </ol>
                         
                         <div class="carousel-inner">
@@ -96,18 +85,13 @@
                         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
-                        </a>
-                
+                        </a>                
                     </div>
-
-                    <!--
-                        <div id="items-projects"></div>
-                    -->
                 </div>
             </div>
 
 
-
+            <!--  About -->
             <div id="container-about" class="container-about">
                 <div class="container-about-header">
                     <div class="container-about-header-content">
@@ -115,26 +99,29 @@
                         <h3>Thanks for checking out and have a great day!</h3>
                         <h2>Email: <span id="text-special">edistyping</span>@gmail.com</h2>
                     </div>
-                    
-
                 </div>
+
+                <!-- Skills Icons. Added to Contact 
+                    <div class="projects-header-icons">
+                        
+                        <div class="bg-image hover-zoom">
+                            <img class="w-100" height="35px" src="/assets/static/logos/react.svg" alt="React" />                        
+                        </div>
+                        <img height="35px" src="/assets/static/logos/django.png" alt="django" />
+                        <img height="35px" src="/assets/static/logos/node.png" alt="node" />
+                        <img height="35px" src="/assets/static/logos/sql.png" alt="sql" />
+                        <img height="35px" src="/assets/static/logos/vba.png" alt="vba" />
+                        <img height="35px" src="/assets/static/logos/github.png" alt="Github" />
+                    </div>
+                -->    
 
                 <div class="container-about-bottom">
                     <h1 id="favoriteQuote"></h1>
                     <h2 id="favoriteQuoteOwner" class="header1" ></h2>
-                    <!--
-                        <div class="header-quote">
-                            <h1 id="favoriteQuote"></h1>
-                        </div>
-                        <div class="header-quoteowner">
-                            <h2 id="favoriteQuoteOwner" class="header1" ></h2>
-                        </div>
-                    -->
                 </div>
             </div>
 
     </div>
-
     </section>
 
     <!-- Javascript -->
