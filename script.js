@@ -148,7 +148,6 @@ function typeWriter() {
     } else if ( ii == 3 && i < homeTexts[ii].length) {
         // Get & to ; location, 
         const currentChar = homeTexts[ii].charAt(i);
-        // console.log("currentChar: " + currentChar);
         if (currentChar == '&') {
             index_emoji = homeTexts[ii].indexOf('&', i);
             index_emoji2 = homeTexts[ii].indexOf(';', i);
@@ -171,7 +170,6 @@ function typeWriter() {
 
 function formatSkills(arr) {
     var temp = ""
-    console.log(arr);
     for(var i = 0; i < arr.length; i++) {
         if (i == arr.length - 1) {
             temp += arr[i];
@@ -215,11 +213,9 @@ function loadProjects() {
  
             // Add additional columns if last row has only 1 or 2 items.
             if (i == data.length - 1 && itemCount == 0) {
-                console.log("111111");
                 content += '<div class="col-sm">';
                 content += '</div>'
             } else if (i == data.length - 1 && itemCount == 1) {
-                console.log("222222");
                 content += '<div class="col-sm">';
                 content += '</div>'
             }
@@ -241,7 +237,6 @@ var index = 0;
 var loadedQuotes = false;
 var myFavoriteQuotes = [];
 function loadQuotes(){
-    // do whatever you like here
     if (index == myFavoriteQuotes.length - 1)
         index = 0;
     else 
@@ -256,18 +251,13 @@ function loadQuotes(){
 
     setTimeout(loadQuotes, 5000);
 }
-loadQuotes();
 
 window.onload = function () {
-    const json = '{"result":true, "count":42}';
-    const obj = JSON.parse(json);
-
     typeWriter();
 
     fetch("./assets/favoriteQuotes.json") 
     .then(response => response.json()) 
     .then(data => {
-        console.log(data);
 
         // For Loading Quotes
         myFavoriteQuotes = data;
