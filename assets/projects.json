@@ -4,8 +4,8 @@
         "description" : "This is my first Django full-stack application. Try to guess which artworks are more expensive",
         "skills" : ["Django", "React", "Postgres", "Heroku" ],
         "url" : "./assets/static/projects/priceisart.jpg",
-        "github": "https://github.com/edistyping/priceisart",
-        "demo" : "https://edistyping.github.io/priceisart/"
+        "github": "https://github.com/edistyping/priceisart-frontend",
+        "demo" : "https://priceisart.com/"
     },
     {
         "project" : "Flying Ninja",
