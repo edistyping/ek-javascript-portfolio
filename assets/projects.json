@@ -1,6 +1,6 @@
 [
     {
-        "project" : "Art is Price!", 
+        "project" : "Price Is Art!", 
         "description" : "This is my first Django full-stack application. Try to guess which artworks are more expensive",
         "skills" : ["Django", "React", "Postgres", "Heroku" ],
         "url" : "./assets/static/projects/priceisart.jpg",
