@@ -1,7 +1,9 @@
 * Scrollable
 * Parallax
 
-### Link: https://edistyping.github.io/javascript-portfolio/
+# Link: https://hifromedwardkim.com/
+
+### Old Link: https://edistyping.github.io/javascript-portfolio/
 
 # Future Plan 
 + Parallax Template
